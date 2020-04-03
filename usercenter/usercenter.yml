@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: usercenter
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+  messages:
+    encoding: UTF-8
+  profiles:
+    include: [server,db]
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+
+my.name: 顶顶顶
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8261/eureka

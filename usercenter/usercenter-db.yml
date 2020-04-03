@@ -1,0 +1,14 @@
+jdbc.driver: org.h2.Driver
+#jdbc.url: jdbc:h2:~/testdb
+#INIT=RUNSCRIPT FROM 'classpath:sql/schema.sql'\;RUNSCRIPT FROM '~/populate.sql'
+jdbc.url: jdbc:h2:mem:testdb1;MODE=MySQL;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:sql/schema.sql'\;RUNSCRIPT FROM 'classpath:sql/data.sql'
+jdbc.username: sa
+jdbc.password:
+
+jdbc.driver1: org.h2.Driver
+jdbc.url1: jdbc:h2:mem:testdb2;MODE=MySQL;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:sql/schema.sql'\;RUNSCRIPT FROM 'classpath:sql/data.sql'
+jdbc.username1: sa
+jdbc.password1:
+
+dbcp.maxIdle: 3
+dbcp.maxTotal: 2
